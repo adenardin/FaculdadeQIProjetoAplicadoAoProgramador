@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class ListaAlunosView extends View {
     
-    private GerenciaDados banco = new GerenciaDados();
+//    private GerenciaDados banco = GerenciaDados().getInstance();
 
     @Override
     public void mostrar() {
         
-        List<Aluno> lista = banco.getListaAlunos();
+        List<Aluno> lista = GerenciaDados.getInstance().getListaAlunos();
         
         System.out.println("\nListagem dos alunos:");
         

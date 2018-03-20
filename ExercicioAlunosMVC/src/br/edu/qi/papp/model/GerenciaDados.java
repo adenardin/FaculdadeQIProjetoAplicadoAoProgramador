@@ -10,10 +10,10 @@ import java.util.Scanner;
  */
 public class GerenciaDados {
     
-    private List<Aluno> listaAlunos = new ArrayList<Aluno>();
-
-    public GerenciaDados() {
-        
+    private final List<Aluno> listaAlunos = new ArrayList<>();
+    private static GerenciaDados instance;
+    
+    private GerenciaDados() {        
         this.carregaDados();
     }
 
@@ -38,6 +38,13 @@ public class GerenciaDados {
             
             listaAlunos.add(a);
         }
-        
     }
+    
+    public static synchronized GerenciaDados getInstance() {
+        if (instance == null) {
+            instance = new GerenciaDados();
+        }
+        return instance;
+    }
+    
 }
