@@ -9,8 +9,6 @@ import java.util.List;
  * @author Luciano
  */
 public class ListaAlunosView extends View {
-    
-//    private GerenciaDados banco = GerenciaDados().getInstance();
 
     @Override
     public void mostrar() {
@@ -30,5 +28,4 @@ public class ListaAlunosView extends View {
         System.out.println("\n--- Tecle Enter para voltar ao menu anterior ");
         this.leitor.nextLine();
     }
-    
 }

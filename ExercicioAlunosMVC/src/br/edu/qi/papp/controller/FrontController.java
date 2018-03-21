@@ -19,6 +19,10 @@ public class FrontController {
                 (new AlunoController()).listar();
                 break;
             }
+            case 5: {
+                (new AtividadeController()).listar();
+                break;
+            }
         }
     }    
 }

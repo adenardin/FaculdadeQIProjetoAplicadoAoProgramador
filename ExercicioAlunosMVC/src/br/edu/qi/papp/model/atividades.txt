@@ -1,0 +1,15 @@
+12
+Semana academica
+6
+20
+Congresso
+12
+12
+Congresso
+12
+1
+Curso
+8
+20
+Monitoria
+40
