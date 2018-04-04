@@ -5,6 +5,8 @@
  */
 package br.edu.qi.papp.view;
 
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author ALUNOS
@@ -56,6 +58,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu6.add(jMenuItem1);
 
         jMenuItem2.setText("Atividades");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem2);
 
         jMenuBar2.add(jMenu6);
@@ -95,8 +102,16 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         FormAlunosView formAlunos = new FormAlunosView();
         formAlunos.setLocationRelativeTo(null);
+        formAlunos.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         formAlunos.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        FormAtividadesView formAtividades = new FormAtividadesView();
+        formAtividades.setLocationRelativeTo(null);
+        formAtividades.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        formAtividades.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments

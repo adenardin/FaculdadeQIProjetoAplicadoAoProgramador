@@ -5,8 +5,8 @@
  */
 package br.edu.qi.papp.view;
 
-import br.edu.qi.papp.controller.AlunoController;
-import br.edu.qi.papp.model.Aluno;
+import br.edu.qi.papp.controller.AtividadeController;
+import br.edu.qi.papp.model.Atividade;
 import br.edu.qi.papp.model.GerenciaDados;
 import java.util.List;
 
@@ -14,16 +14,16 @@ import java.util.List;
  *
  * @author ALUNOS
  */
-public class FormAlunosView extends javax.swing.JFrame {
+public class FormAtividadesView extends javax.swing.JFrame {
     
-    private AlunoController controller;
+    private AtividadeController controller;
     
     /**
-     * Creates new form FormListaAlunosView
+     * Creates new form FormListaAtividadesView
      */
-    public FormAlunosView() {
+    public FormAtividadesView() {
         initComponents();
-        this.controller = new AlunoController();
+        this.controller = new AtividadeController();
     }
 
     /**
@@ -56,19 +56,19 @@ public class FormAlunosView extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jToggleButton1.setText("Listar Alunos");
+        jToggleButton1.setText("Listar Atividades");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Lista de Alunos");
+        jLabel1.setText("Lista de Atividades");
 
         jLabel2.setBackground(new java.awt.Color(204, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 21)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Administração de Alunos");
+        jLabel2.setText("Administração de Atividades");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,16 +104,16 @@ public class FormAlunosView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        List<Aluno> lista = this.controller.BuscaTodos();
+        List<Atividade> lista = this.controller.BuscaTodos();
         
         int i = 0;
-        for(Aluno a: lista) {            
+        for(Atividade a: lista) {            
             jTextArea1.setLineWrap(true);
-            jTextArea1.append("\nAluno " + (++i));
+            jTextArea1.append("\nNome: Atividade " + a.getNomeAtiv());
             jTextArea1.setWrapStyleWord(true);
-            jTextArea1.append("\nNome: " + a.getNome());
+            jTextArea1.append("\nHoras Cumpridas: " + a.getHorasCumpridas());
             jTextArea1.setWrapStyleWord(true);
-            jTextArea1.append("\nRA: " + a.getRa() + "\n");
+            jTextArea1.append("\nNome do Aluno: " + a.getAluno().getNome() + "\n");
             jTextArea1.setWrapStyleWord(true);
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
@@ -135,14 +135,22 @@ public class FormAlunosView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormAlunosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormAtividadesView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormAlunosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormAtividadesView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormAlunosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormAtividadesView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormAlunosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormAtividadesView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -155,7 +163,7 @@ public class FormAlunosView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormAlunosView().setVisible(true);
+                new FormAtividadesView().setVisible(true);
             }
         });
     }
