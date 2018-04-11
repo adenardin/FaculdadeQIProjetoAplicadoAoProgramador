@@ -1,0 +1,51 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema teste
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `teste` ;
+
+-- -----------------------------------------------------
+-- Schema teste
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `teste` DEFAULT CHARACTER SET utf8 ;
+USE `teste` ;
+
+-- -----------------------------------------------------
+-- Table `teste`.`aluno`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `teste`.`aluno` ;
+
+CREATE TABLE IF NOT EXISTS `teste`.`aluno` (
+  `ra` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ra`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `teste`.`aluno`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `teste`;
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'João');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Maria');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Anderson');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Ketrin');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Marcia');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Luciano');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Samanta');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Miguel');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Regis');
+INSERT INTO `teste`.`aluno` (`ra`, `nome`) VALUES (null, 'Roger');
+
+COMMIT;
+
